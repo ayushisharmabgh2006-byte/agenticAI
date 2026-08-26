@@ -81,10 +81,10 @@ Open a terminal window and run:
 cd server
 
 # Install dependencies (if not already installed)
-npm install
+npm.cmd install
 
 # Start the backend server (runs on port 4000)
-npm run dev
+npm.cmd run dev
 ```
 
 *The backend server will start at `http://localhost:4000` with Zero-Config In-Memory Mode enabled automatically.*
@@ -100,10 +100,10 @@ Open a second terminal window and run:
 cd client
 
 # Install dependencies (if not already installed)
-npm install
+npm.cmd install
 
 # Start the Next.js development server (runs on port 3000)
-npm run dev
+npm.cmd run dev
 ```
 
 *Open **`http://localhost:3000`** in your browser.*
