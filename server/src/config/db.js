@@ -10,7 +10,10 @@ export const memory = {
   executionLogs: [],
   integrations: [],
   notifications: [],
-  agentMemory: []
+  agentMemory: [],
+  documents: [],
+  documentChunks: [],
+  ragChats: []
 };
 
 // Seed initial memory store

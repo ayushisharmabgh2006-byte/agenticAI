@@ -13,6 +13,7 @@ import workflowRoutes from './routes/workflowRoutes.js';
 import executionRoutes from './routes/executionRoutes.js';
 import integrationRoutes from './routes/integrationRoutes.js';
 import notificationRoutes from './routes/notificationRoutes.js';
+import ragRoutes from './routes/ragRoutes.js';
 
 const app = express();
 const server = http.createServer(app);
@@ -57,6 +58,7 @@ app.use('/api/workflows', workflowRoutes);
 app.use('/api/executions', executionRoutes);
 app.use('/api/integrations', integrationRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/rag', ragRoutes);
 
 // Global Error Handler
 app.use((error, req, res, next) => {

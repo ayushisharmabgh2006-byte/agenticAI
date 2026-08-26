@@ -6,6 +6,8 @@ import {
   Sparkles,
   Activity,
   Cable,
+  MessageCircle,
+  Database,
   Settings2,
   Zap,
   Bell,
@@ -21,6 +23,8 @@ const navigation = [
   { href: '/dashboard', label: 'Command Center', icon: LayoutDashboard },
   { href: '/workflows', label: 'Workflows', icon: Workflow },
   { href: '/workflows/builder', label: 'AI Studio', icon: Sparkles },
+  { href: '/chat', label: 'College Chat', icon: MessageCircle },
+  { href: '/knowledge', label: 'Knowledge Base', icon: Database },
   { href: '/executions', label: 'Executions', icon: Activity },
   { href: '/integrations', label: 'Integrations', icon: Cable },
   { href: '/settings', label: 'Settings', icon: Settings2 }

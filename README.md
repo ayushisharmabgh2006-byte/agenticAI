@@ -1,4 +1,4 @@
-# ⚡ Agentflow_AI — Agentic Operations Automation Platform
+# ⚡ RAG-Based College Chatbot — Agentflow_AI Platform
 
 <div align="center">
 
@@ -10,6 +10,8 @@
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 **Turn natural intent into resilient, visual, and multi-agent automated pipelines with real-time auditability.**
+
+The platform includes a grounded college information assistant: administrators upload college PDFs, notices, FAQs, and policies; students ask questions; the server extracts and chunks documents, retrieves relevant context, and returns answers with source references. When no relevant source exists, the assistant clearly says it does not know.
 
 </div>
 
@@ -199,6 +201,15 @@ ai automation project folder/
 ---
 
 ## 📡 REST API Reference
+
+### RAG College Chatbot
+- `GET /api/rag/documents` — List indexed documents for the authenticated user.
+- `POST /api/rag/documents` — Admin-only PDF, TXT, or Markdown upload. Extracts text, creates overlapping chunks, and indexes them.
+- `DELETE /api/rag/documents/:id` — Admin-only document and chunk deletion.
+- `POST /api/rag/chat` — Retrieve relevant chunks and return a grounded answer with source excerpts.
+- `GET /api/rag/chat/:id/history` — Fetch conversation context for a chat session.
+
+The local fallback uses deterministic lexical retrieval, so the complete RAG flow works without an external vector database or AI key. Set `GEMINI_API_KEY` on the backend to enable Gemini answer generation after retrieval. Keep all provider keys in Render environment variables; never use them in `NEXT_PUBLIC_*` variables or commit them to GitHub.
 
 ### Authentication & Profile
 - `POST /api/auth/register` — Register a new operator or admin user.

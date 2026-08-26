@@ -68,7 +68,10 @@ CLIENT_URL=https://YOUR-VERCEL-DOMAIN.vercel.app
 JWT_SECRET=generate-a-long-random-secret
 CREDENTIAL_ENCRYPTION_KEY=use-a-32-byte-key
 MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@CLUSTER.mongodb.net/agentflow?retryWrites=true&w=majority
+GEMINI_API_KEY=your-server-side-gemini-key
 ```
+
+The college chatbot is available at `/chat`, and admins manage source PDFs/TXT/Markdown files at `/knowledge`. The server performs extraction, chunking, retrieval, source citation, and unknown-question handling locally. `GEMINI_API_KEY` is optional and must be added only to Render environment variables; never add an AI key to the frontend or a `NEXT_PUBLIC_*` variable. Since an API key was shared during setup, rotate it before deployment if it is active.
 
 Optional variables can be added when their providers are configured:
 
