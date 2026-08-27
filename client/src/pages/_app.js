@@ -9,6 +9,8 @@ export default function App({ Component, pageProps }) {
   const { fetchNotifications } = useWorkflowStore();
 
   useEffect(() => {
+    const savedTheme = window.localStorage.getItem('agentflow-theme');
+    document.documentElement.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
     initAuth();
     fetchNotifications();
     getSocket();

@@ -101,7 +101,7 @@ export default function WorkflowEditorPage() {
       <ProtectedRoute>
         <AppShell activeTitle="Workflow Studio">
           <div className="h-[70vh] flex flex-col items-center justify-center text-center">
-            <Loader2 className="animate-spin text-[#c7f36b] mb-3" size={32} />
+            <Loader2 className="animate-spin text-[#a855f7] mb-3" size={32} />
             <p className="text-xs font-mono text-muted">Loading visual workflow DAG...</p>
           </div>
         </AppShell>
@@ -129,7 +129,7 @@ export default function WorkflowEditorPage() {
                   <h2 className="font-grotesk font-bold text-sm text-white">
                     {currentWorkflow.name}
                   </h2>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#181c22] border border-[#262c35] text-[#c7f36b]">
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#181c22] border border-[#262c35] text-[#a855f7]">
                     v{currentWorkflow.version || 1}
                   </span>
                 </div>
@@ -151,7 +151,7 @@ export default function WorkflowEditorPage() {
                 disabled={saving}
                 className="secondary-button small !py-1.5"
               >
-                {saving ? <Loader2 className="animate-spin" size={14} /> : saveSuccess ? <Check size={14} className="text-[#c7f36b]" /> : <Save size={14} />}
+                {saving ? <Loader2 className="animate-spin" size={14} /> : saveSuccess ? <Check size={14} className="text-[#a855f7]" /> : <Save size={14} />} 
                 <span>{saveSuccess ? 'Saved' : 'Save'}</span>
               </button>
 

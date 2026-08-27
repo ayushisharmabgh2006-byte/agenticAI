@@ -8,7 +8,7 @@ export default function MetricGrid({ metrics }) {
       trend: '+3 this month',
       sublabel: 'Operational pipelines',
       icon: Workflow,
-      color: 'text-[#c7f36b]'
+      color: 'text-[#a855f7]'
     },
     {
       label: 'Success Rate',

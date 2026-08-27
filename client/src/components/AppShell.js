@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import {
   LayoutDashboard,
@@ -15,6 +16,7 @@ import {
   ChevronRight,
   ShieldCheck
 } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 import { useWorkflowStore } from '../store/workflowStore';
 import NotificationsDrawer from './NotificationsDrawer';
@@ -34,6 +36,21 @@ export default function AppShell({ children, activeTitle = null }) {
   const router = useRouter();
   const { user, logout } = useAuthStore();
   const { notifications, toggleNotifications } = useWorkflowStore();
+  const [isLightTheme, setIsLightTheme] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem('agentflow-theme');
+    const light = savedTheme === 'light';
+    setIsLightTheme(light);
+    document.documentElement.dataset.theme = light ? 'light' : 'dark';
+  }, []);
+
+  const toggleTheme = () => {
+    const nextIsLight = !isLightTheme;
+    setIsLightTheme(nextIsLight);
+    window.localStorage.setItem('agentflow-theme', nextIsLight ? 'light' : 'dark');
+    document.documentElement.dataset.theme = nextIsLight ? 'light' : 'dark';
+  };
 
   const unreadCount = notifications.filter(n => !n.isRead).length;
 
@@ -58,13 +75,13 @@ export default function AppShell({ children, activeTitle = null }) {
             <Zap size={18} />
           </span>
           <span className="flex items-center tracking-tight">
-            agentflow<span className="text-[#c7f36b]">_AI</span>
+            agentflow<span className="text-[#a855f7]">_AI</span>
           </span>
         </Link>
 
         <div className="mt-8 mb-3 px-3 flex items-center justify-between">
           <span className="eyebrow">WORKSPACE / 01</span>
-          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1b1f26] text-[#c7f36b] border border-[#262c35]">
+          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1b1f26] text-[#a855f7] border border-[#262c35]">
             v1.0
           </span>
         </div>
@@ -91,10 +108,10 @@ export default function AppShell({ children, activeTitle = null }) {
         <div className="mt-6 p-3.5 rounded-xl bg-[#14181d] border border-[#262c35] text-xs">
           <div className="flex items-center justify-between font-mono text-[11px] text-muted-light">
             <span className="flex items-center gap-1.5">
-              <span className="h-2 w-2 rounded-full bg-[#c7f36b] animate-pulse"></span>
+              <span className="h-2 w-2 rounded-full bg-[#a855f7] animate-pulse"></span>
               Orchestrator
             </span>
-            <span className="text-[#c7f36b] font-bold">5 Agents</span>
+            <span className="text-[#a855f7] font-bold">5 Agents</span>
           </div>
           <p className="text-[10px] font-mono text-muted mt-1.5 leading-relaxed">
             Planner • Execution • Validation • Recovery • Monitoring
@@ -110,7 +127,7 @@ export default function AppShell({ children, activeTitle = null }) {
                 <b className="text-xs text-white truncate">{user?.name || 'Alex Rivera'}</b>
               </div>
               <small className="text-[11px] font-mono text-muted flex items-center gap-1">
-                <ShieldCheck size={11} className="text-[#c7f36b]" />
+                <ShieldCheck size={11} className="text-[#a855f7]" />
                 {user?.role === 'admin' ? 'Admin' : 'Operator'}
               </small>
             </div>
@@ -150,6 +167,15 @@ export default function AppShell({ children, activeTitle = null }) {
             >
               <Bell size={17} />
               {unreadCount > 0 && <span className="badge-dot" />}
+            </button>
+
+            <button
+              onClick={toggleTheme}
+              className="icon-button theme-toggle"
+              aria-label={isLightTheme ? 'Switch to dark theme' : 'Switch to light theme'}
+              title={isLightTheme ? 'Switch to dark theme' : 'Switch to light theme'}
+            >
+              {isLightTheme ? <Moon size={17} /> : <Sun size={17} />}
             </button>
           </div>
         </header>

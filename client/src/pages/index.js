@@ -21,25 +21,25 @@ export default function LandingPage() {
 
   const agentChain = [
     { num: '01', name: 'Planner Agent', desc: 'Constructs deterministic DAG, orders nodes, and calculates confidence score.', color: 'text-[#38bdf8]', icon: Brain },
-    { num: '02', name: 'Execution Agent', desc: 'Dispatches tool calls across Gmail, Slack, Discord, and Google Sheets.', color: 'text-[#c7f36b]', icon: Layers },
+    { num: '02', name: 'Execution Agent', desc: 'Dispatches tool calls across Gmail, Slack, Discord, and Google Sheets.', color: 'text-[#a855f7]', icon: Layers },
     { num: '03', name: 'Validation Agent', desc: 'Verifies required schemas and structural output integrity.', color: 'text-[#c084fc]', icon: CheckCircle2 },
     { num: '04', name: 'Recovery Agent', desc: 'Classifies failure states and orchestrates exponential backoff retries.', color: 'text-[#fbbf24]', icon: ShieldAlert },
     { num: '05', name: 'Monitoring Agent', desc: 'Streams live audit telemetry to Socket.IO and records execution traces.', color: 'text-[#cbd5e1]', icon: Activity }
   ];
 
   return (
-    <div className="min-h-screen bg-[#0b0d10] text-white relative overflow-hidden selection:bg-[#c7f36b] selection:text-black">
+    <div className="min-h-screen bg-[#0b0d10] text-white relative overflow-hidden selection:bg-[#a855f7] selection:text-black">
       {/* Background ambient lighting */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#1b3323]/40 via-[#102418]/20 to-transparent blur-3xl pointer-events-none" />
 
       {/* Header Navigation */}
       <nav className="relative z-10 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-[#262c35]/50">
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="h-9 w-9 rounded-lg bg-[#c7f36b] text-black grid place-items-center font-black">
+          <div className="h-9 w-9 rounded-lg bg-[#a855f7] text-black grid place-items-center font-black">
             <Zap size={20} />
           </div>
           <span className="font-grotesk font-bold text-xl tracking-tight">
-            agentflow<span className="text-[#c7f36b]">_AI</span>
+            agentflow<span className="text-[#a855f7]">_AI</span>
           </span>
         </Link>
 
@@ -64,14 +64,14 @@ export default function LandingPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#172218] border border-[#2b442d] text-xs font-mono text-[#c7f36b]">
-              <span className="h-2 w-2 rounded-full bg-[#c7f36b] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#172218] border border-[#2b442d] text-xs font-mono text-[#a855f7]">
+              <span className="h-2 w-2 rounded-full bg-[#a855f7] animate-pulse" />
               <span>Multi-Agent Operations Automation</span>
             </div>
 
             <h1 className="font-grotesk text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
               Turn natural intent into <br />
-              <span className="text-[#c7f36b]">resilient workflows.</span>
+              <span className="text-[#a855f7]">resilient workflows.</span>
             </h1>
 
             <p className="text-muted-light text-base sm:text-lg max-w-xl leading-relaxed">
@@ -93,7 +93,7 @@ export default function LandingPage() {
                 <div className="text-xs text-muted mt-1">Autonomous chain</div>
               </div>
               <div>
-                <div className="text-2xl font-grotesk font-bold text-[#c7f36b]">Real-Time</div>
+                <div className="text-2xl font-grotesk font-bold text-[#a855f7]">Real-Time</div>
                 <div className="text-xs text-muted mt-1">Socket.IO streaming</div>
               </div>
               <div>
@@ -110,7 +110,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-2">
                   <span className="h-3 w-3 rounded-full bg-[#fb7185]/80" />
                   <span className="h-3 w-3 rounded-full bg-[#fbbf24]/80" />
-                  <span className="h-3 w-3 rounded-full bg-[#c7f36b]/80" />
+                  <span className="h-3 w-3 rounded-full bg-[#a855f7]/80" />
                 </div>
                 <span className="text-[11px] font-mono text-muted">AGENT_ORCHESTRATOR.LOG</span>
               </div>
@@ -126,7 +126,7 @@ export default function LandingPage() {
 
                 <div className="p-3 rounded-lg bg-[#181c22] border border-[#29323f]">
                   <div className="flex items-center justify-between text-muted text-[10px]">
-                    <span className="text-[#c7f36b] font-bold">EXECUTION</span>
+                    <span className="text-[#a855f7] font-bold">EXECUTION</span>
                     <span>00:00.35</span>
                   </div>
                   <p className="text-white mt-1">Evaluated Claude 3.5 prompt & appended row to Google Sheet</p>
@@ -142,10 +142,10 @@ export default function LandingPage() {
 
                 <div className="p-3 rounded-lg bg-[#162018] border border-[#2a452d]">
                   <div className="flex items-center justify-between text-muted text-[10px]">
-                    <span className="text-[#c7f36b] font-bold">MONITORING</span>
+                    <span className="text-[#a855f7] font-bold">MONITORING</span>
                     <span>00:00.48</span>
                   </div>
-                  <p className="text-[#c7f36b] font-semibold mt-1">Pipeline completed successfully (480ms)</p>
+                  <p className="text-[#a855f7] font-semibold mt-1">Pipeline completed successfully (480ms)</p>
                 </div>
               </div>
             </div>

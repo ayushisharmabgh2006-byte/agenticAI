@@ -6,7 +6,7 @@ const PALETTE_CATEGORIES = [
     items: [
       { type: 'trigger', provider: 'webhook', label: 'Webhook Ingest', icon: Globe, color: 'text-[#fbbf24]', config: { event: 'webhook.received' } },
       { type: 'trigger', provider: 'gmail', label: 'Gmail Poller', icon: Mail, color: 'text-[#fb7185]', config: { query: 'is:unread label:inbox' } },
-      { type: 'trigger', provider: 'schedule', label: 'Schedule Cron', icon: Clock, color: 'text-[#c7f36b]', config: { schedule: '0 * * * *' } },
+      { type: 'trigger', provider: 'schedule', label: 'Schedule Cron', icon: Clock, color: 'text-[#a855f7]', config: { schedule: '0 * * * *' } },
       { type: 'trigger', provider: 'manual', label: 'Manual Trigger', icon: Zap, color: 'text-[#38bdf8]', config: { event: 'manual' } }
     ]
   },
@@ -78,7 +78,7 @@ export default function NodePalette({ onAddNode }) {
                         <Icon size={14} />
                       </div>
                       <div>
-                        <div className="text-xs font-semibold text-white group-hover:text-[#c7f36b] transition-colors">
+                        <div className="text-xs font-semibold text-white group-hover:text-[#a855f7] transition-colors">
                           {item.label}
                         </div>
                         <div className="text-[10px] font-mono text-muted">{item.provider}</div>

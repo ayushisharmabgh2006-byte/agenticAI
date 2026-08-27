@@ -34,11 +34,11 @@ export default function RegisterPage() {
       <div className="w-full max-w-md bg-[#13161a] border border-[#262c35] rounded-2xl p-8 shadow-2xl relative z-10">
         <div className="text-center">
           <Link href="/" className="inline-flex items-center gap-2.5 mx-auto">
-            <div className="h-9 w-9 rounded-lg bg-[#c7f36b] text-black grid place-items-center font-black">
+            <div className="h-9 w-9 rounded-lg bg-[#a855f7] text-black grid place-items-center font-black">
               <Zap size={20} />
             </div>
             <span className="font-grotesk font-bold text-xl tracking-tight">
-              agentflow<span className="text-[#c7f36b]">_AI</span>
+              agentflow<span className="text-[#a855f7]">_AI</span>
             </span>
           </Link>
           <h2 className="font-grotesk text-2xl font-bold mt-5">Create Operator Account</h2>
@@ -61,7 +61,7 @@ export default function RegisterPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Alex Rivera"
-                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#c7f36b]"
+                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#a855f7]"
               />
               <User size={15} className="absolute left-3 top-3 text-muted" />
             </div>
@@ -76,7 +76,7 @@ export default function RegisterPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="operator@agentflow.io"
-                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#c7f36b]"
+                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#a855f7]"
               />
               <Mail size={15} className="absolute left-3 top-3 text-muted" />
             </div>
@@ -91,7 +91,7 @@ export default function RegisterPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#c7f36b]"
+                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#a855f7]"
               />
               <Lock size={15} className="absolute left-3 top-3 text-muted" />
             </div>
@@ -102,7 +102,7 @@ export default function RegisterPage() {
             <select
               value={role}
               onChange={(e) => setRole(e.target.value)}
-              className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#c7f36b]"
+              className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-[#a855f7]"
             >
               <option value="operator">Operator (Workflow Designer & Executor)</option>
               <option value="admin">Administrator (Full System & Security Access)</option>
@@ -121,7 +121,7 @@ export default function RegisterPage() {
 
         <div className="mt-6 text-center text-xs font-mono text-muted">
           Already have an account?{' '}
-          <Link href="/login" className="text-[#c7f36b] hover:underline font-bold">
+          <Link href="/login" className="text-[#a855f7] hover:underline font-bold">
             Sign In
           </Link>
         </div>

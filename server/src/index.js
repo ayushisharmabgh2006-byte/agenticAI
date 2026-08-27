@@ -73,7 +73,7 @@ app.use((error, req, res, next) => {
 
 // Start Server
 await connectDatabase();
-server.listen(env.port, () => {
+server.listen(env.port, '0.0.0.0', () => {
   console.log(`=======================================================`);
   console.log(`⚡ Agentflow_AI Server listening on http://localhost:${env.port}`);
   console.log(`⚡ Real-Time Socket.IO Server active`);

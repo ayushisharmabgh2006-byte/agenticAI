@@ -40,11 +40,11 @@ export default function LoginPage() {
         {/* Brand Header */}
         <div className="text-center">
           <Link href="/" className="inline-flex items-center gap-2.5 mx-auto">
-            <div className="h-9 w-9 rounded-lg bg-[#c7f36b] text-black grid place-items-center font-black">
+            <div className="h-9 w-9 rounded-lg bg-[#a855f7] text-black grid place-items-center font-black">
               <Zap size={20} />
             </div>
             <span className="font-grotesk font-bold text-xl tracking-tight">
-              agentflow<span className="text-[#c7f36b]">_AI</span>
+              agentflow<span className="text-[#a855f7]">_AI</span>
             </span>
           </Link>
           <h2 className="font-grotesk text-2xl font-bold mt-5">Sign In to Console</h2>
@@ -60,7 +60,7 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => handleQuickFill('operator')}
-              className="py-1.5 px-2.5 rounded-lg bg-[#20252e] hover:bg-[#28303c] border border-[#303845] text-xs font-mono text-[#c7f36b] flex items-center justify-center gap-1.5 transition-colors"
+              className="py-1.5 px-2.5 rounded-lg bg-[#20252e] hover:bg-[#28303c] border border-[#303845] text-xs font-mono text-[#a855f7] flex items-center justify-center gap-1.5 transition-colors"
             >
               <User size={13} /> Operator Mode
             </button>
@@ -91,7 +91,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="operator@agentflow.io"
-                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#c7f36b]"
+                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#a855f7]"
               />
               <Mail size={15} className="absolute left-3 top-3 text-muted" />
             </div>
@@ -106,7 +106,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#c7f36b]"
+                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white pl-9 focus:outline-none focus:border-[#a855f7]"
               />
               <Lock size={15} className="absolute left-3 top-3 text-muted" />
             </div>
@@ -124,7 +124,7 @@ export default function LoginPage() {
 
         <div className="mt-6 text-center text-xs font-mono text-muted">
           Don't have an account?{' '}
-          <Link href="/register" className="text-[#c7f36b] hover:underline font-bold">
+          <Link href="/register" className="text-[#a855f7] hover:underline font-bold">
             Register now
           </Link>
         </div>

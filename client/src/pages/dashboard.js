@@ -66,13 +66,13 @@ export default function DashboardPage() {
           {/* Welcome Banner */}
           <div className="p-7 rounded-2xl bg-gradient-to-r from-[#17231a] via-[#141b17] to-[#13161a] border border-[#2c402d] relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-xl">
             <div className="space-y-2 z-10 max-w-xl">
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-[#c7f36b]">
-                <span className="h-2 w-2 rounded-full bg-[#c7f36b] animate-pulse" />
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-[#a855f7]">
+                <span className="h-2 w-2 rounded-full bg-[#a855f7] animate-pulse" />
                 <span>ALL SYSTEMS OPERATIONAL</span>
               </div>
               <h2 className="font-grotesk text-3xl font-bold text-white tracking-tight">
                 Make complex workflows <br />
-                <span className="text-[#c7f36b]">effortlessly autonomous.</span>
+                <span className="text-[#a855f7]">effortlessly autonomous.</span>
               </h2>
               <p className="text-xs text-muted-light leading-relaxed">
                 5 cooperating AI agents stand ready to plan, execute, validate, and recover your automation tasks in real time.
@@ -90,7 +90,7 @@ export default function DashboardPage() {
 
             {/* Subtle decorative circles */}
             <div className="absolute right-10 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#2b442e]/40 pointer-events-none opacity-40" />
-            <div className="absolute right-20 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#c7f36b]/20 pointer-events-none opacity-30" />
+            <div className="absolute right-20 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#a855f7]/20 pointer-events-none opacity-30" />
           </div>
 
           {/* Metric Grid */}
@@ -105,7 +105,7 @@ export default function DashboardPage() {
                   <span className="eyebrow">EXECUTION STREAM</span>
                   <h3 className="font-grotesk font-bold text-base text-white mt-0.5">Recent Pipeline Runs</h3>
                 </div>
-                <Link href="/executions" className="text-xs text-[#c7f36b] hover:underline flex items-center gap-1 font-medium">
+                <Link href="/executions" className="text-xs text-[#a855f7] hover:underline flex items-center gap-1 font-medium">
                   View full logs <ArrowUpRight size={14} />
                 </Link>
               </div>
@@ -114,11 +114,11 @@ export default function DashboardPage() {
                 {recentRuns.map((run) => (
                   <div key={run.id} className="py-3.5 flex items-center justify-between gap-4 group">
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className="h-8 w-8 rounded-lg bg-[#181c22] border border-[#262c35] grid place-items-center text-[#c7f36b] shrink-0">
+                      <div className="h-8 w-8 rounded-lg bg-[#181c22] border border-[#262c35] grid place-items-center text-[#a855f7] shrink-0">
                         <Workflow size={15} />
                       </div>
                       <div className="min-w-0">
-                        <Link href={`/executions/${run.id}`} className="text-xs font-semibold text-white hover:text-[#c7f36b] transition-colors truncate block">
+                        <Link href={`/executions/${run.id}`} className="text-xs font-semibold text-white hover:text-[#a855f7] transition-colors truncate block">
                           {run.name}
                         </Link>
                         <div className="text-[10px] font-mono text-muted mt-0.5">
@@ -145,7 +145,7 @@ export default function DashboardPage() {
                   <span className="eyebrow">AGENT FLEET</span>
                   <h3 className="font-grotesk font-bold text-base text-white mt-0.5">Chain Health & Telemetry</h3>
                 </div>
-                <span className="text-[10px] font-mono text-[#c7f36b] bg-[#1a251b] px-2 py-0.5 rounded border border-[#2e472e]">
+                <span className="text-[10px] font-mono text-[#a855f7] bg-[#1a251b] px-2 py-0.5 rounded border border-[#2e472e]">
                   Operational
                 </span>
               </div>
@@ -158,13 +158,13 @@ export default function DashboardPage() {
                         <span className="text-[10px] font-mono text-muted">0{i + 1}</span>
                         <b className="text-white font-medium">{agent.name}</b>
                       </div>
-                      <span className="font-mono text-xs text-[#c7f36b] font-bold">{agent.health}</span>
+                      <span className="font-mono text-xs text-[#a855f7] font-bold">{agent.health}</span>
                     </div>
 
                     {/* Progress Bar */}
                     <div className="mt-2.5 h-1.5 w-full bg-[#242b35] rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-[#c7f36b] rounded-full"
+                        className="h-full bg-[#a855f7] rounded-full"
                         style={{ width: agent.health }}
                       />
                     </div>

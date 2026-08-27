@@ -52,7 +52,7 @@ export default function WorkflowCanvas({
       const newEdge = {
         ...params,
         animated: true,
-        style: { stroke: '#c7f36b', strokeWidth: 2 }
+        style: { stroke: '#a855f7', strokeWidth: 2 }
       };
       setEdges((eds) => addEdge(newEdge, eds));
     },
@@ -92,7 +92,7 @@ export default function WorkflowCanvas({
         <MiniMap
           className="!bottom-4 !right-4"
           nodeColor={(n) => {
-            if (n.type === 'trigger') return '#c7f36b';
+            if (n.type === 'trigger') return '#a855f7';
             if (n.type === 'ai') return '#c084fc';
             if (n.type === 'integration') return '#38bdf8';
             return '#fbbf24';

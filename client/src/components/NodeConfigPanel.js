@@ -36,7 +36,7 @@ export default function NodeConfigPanel({ node, onUpdateNode, onDeleteNode, onCl
       {/* Header */}
       <div className="flex items-center justify-between pb-4 border-b border-[#262c35]">
         <div className="flex items-center gap-2">
-          <div className="h-7 w-7 rounded-lg bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#c7f36b]">
+          <div className="h-7 w-7 rounded-lg bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#a855f7]">
             <Settings size={14} />
           </div>
           <div>
@@ -61,7 +61,7 @@ export default function NodeConfigPanel({ node, onUpdateNode, onDeleteNode, onCl
             type="text"
             value={label}
             onChange={(e) => handleLabelChange(e.target.value)}
-            className="w-full bg-[#181b21] border border-[#262c35] rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-[#c7f36b]"
+            className="w-full bg-[#181b21] border border-[#262c35] rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-[#a855f7]"
           />
         </div>
 

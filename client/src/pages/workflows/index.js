@@ -107,7 +107,7 @@ export default function WorkflowsListPage() {
                   placeholder="Search workflows by name or description..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full bg-[#13161a] border border-[#262c35] rounded-xl px-4 py-2.5 text-xs text-white pl-10 focus:outline-none focus:border-[#c7f36b]"
+                  className="w-full bg-[#13161a] border border-[#262c35] rounded-xl px-4 py-2.5 text-xs text-white pl-10 focus:outline-none focus:border-[#a855f7]"
                 />
                 <Search size={15} className="absolute left-3.5 top-3 text-muted" />
               </div>
@@ -134,7 +134,7 @@ export default function WorkflowsListPage() {
                 onClick={() => setSelectedTag('')}
                 className={`px-3 py-1 rounded-full border transition-all ${
                   selectedTag === ''
-                    ? 'bg-[#c7f36b] text-ink font-bold border-[#c7f36b]'
+                    ? 'bg-[#a855f7] text-ink font-bold border-[#a855f7]'
                     : 'bg-[#14171b] text-muted border-[#262c35] hover:text-white'
                 }`}
               >
@@ -146,7 +146,7 @@ export default function WorkflowsListPage() {
                   onClick={() => setSelectedTag(tag === selectedTag ? '' : tag)}
                   className={`px-3 py-1 rounded-full border transition-all ${
                     selectedTag === tag
-                      ? 'bg-[#c7f36b] text-ink font-bold border-[#c7f36b]'
+                      ? 'bg-[#a855f7] text-ink font-bold border-[#a855f7]'
                       : 'bg-[#14171b] text-muted border-[#262c35] hover:text-white'
                   }`}
                 >
@@ -159,7 +159,7 @@ export default function WorkflowsListPage() {
           {/* Workflows Grid */}
           {loading ? (
             <div className="py-20 text-center">
-              <Loader2 className="animate-spin text-[#c7f36b] mx-auto" size={32} />
+              <Loader2 className="animate-spin text-[#a855f7] mx-auto" size={32} />
               <p className="text-xs font-mono text-muted mt-3">Loading automation catalog...</p>
             </div>
           ) : filteredWorkflows.length === 0 ? (
@@ -187,12 +187,12 @@ export default function WorkflowsListPage() {
                     <div>
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex items-center gap-2.5">
-                          <div className="h-9 w-9 rounded-xl bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#c7f36b] group-hover:scale-105 transition-transform">
+                          <div className="h-9 w-9 rounded-xl bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#a855f7] group-hover:scale-105 transition-transform">
                             <Workflow size={17} />
                           </div>
                           <div>
                             <span className="text-[10px] font-mono text-muted">v{wf.version || 1} • {nodeCount} nodes</span>
-                            <h3 className="font-grotesk font-bold text-sm text-white group-hover:text-[#c7f36b] transition-colors line-clamp-1">
+                            <h3 className="font-grotesk font-bold text-sm text-white group-hover:text-[#a855f7] transition-colors line-clamp-1">
                               {wf.name}
                             </h3>
                           </div>
@@ -225,7 +225,7 @@ export default function WorkflowsListPage() {
                         <button
                           onClick={() => setActiveRunWorkflow(wf)}
                           title="Execute workflow"
-                          className="p-2 rounded-lg bg-[#1a251b] hover:bg-[#233525] border border-[#2d472e] text-[#c7f36b] transition-colors"
+                          className="p-2 rounded-lg bg-[#1a251b] hover:bg-[#233525] border border-[#2d472e] text-[#a855f7] transition-colors"
                         >
                           <Play size={14} />
                         </button>
@@ -247,7 +247,7 @@ export default function WorkflowsListPage() {
 
                       <Link
                         href={`/workflows/${wf.id || wf._id}`}
-                        className="text-xs font-semibold text-white hover:text-[#c7f36b] flex items-center gap-1 transition-colors"
+                        className="text-xs font-semibold text-white hover:text-[#a855f7] flex items-center gap-1 transition-colors"
                       >
                         Open Studio <ChevronRight size={14} />
                       </Link>
@@ -274,7 +274,7 @@ export default function WorkflowsListPage() {
                       placeholder="e.g. Lead Router & CRM Sync"
                       value={newWorkflowName}
                       onChange={(e) => setNewWorkflowName(e.target.value)}
-                      className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#c7f36b]"
+                      className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#a855f7]"
                     />
                   </div>
 

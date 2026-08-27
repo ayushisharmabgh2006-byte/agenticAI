@@ -111,7 +111,7 @@ export default function ExecutionDetailPage() {
       <ProtectedRoute>
         <AppShell activeTitle="Execution Detail">
           <div className="py-20 text-center">
-            <Loader2 className="animate-spin text-[#c7f36b] mx-auto mb-3" size={32} />
+            <Loader2 className="animate-spin text-[#a855f7] mx-auto mb-3" size={32} />
             <p className="text-xs font-mono text-muted">Loading execution snapshot...</p>
           </div>
         </AppShell>
@@ -236,7 +236,7 @@ export default function ExecutionDetailPage() {
                 <span className="eyebrow block mb-1">AUDIT METADATA</span>
                 <div className="flex justify-between py-1.5 border-b border-[#262c35]">
                   <span className="text-muted">Workflow ID</span>
-                  <Link href={`/workflows/${execution.workflowId}`} className="text-[#c7f36b] hover:underline font-bold">
+                  <Link href={`/workflows/${execution.workflowId}`} className="text-[#a855f7] hover:underline font-bold">
                     {execution.workflowId}
                   </Link>
                 </div>

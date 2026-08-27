@@ -25,22 +25,22 @@ function getProviderIcon(provider) {
     case 'gemini':
     case 'ai': return <Bot size={15} className="text-[#c084fc]" />;
     case 'webhook': return <Globe size={15} className="text-[#fbbf24]" />;
-    default: return <Zap size={15} className="text-[#c7f36b]" />;
+    default: return <Zap size={15} className="text-[#a855f7]" />;
   }
 }
 
 export const TriggerNode = memo(({ data, selected }) => {
   return (
     <div className={`p-4 rounded-xl bg-[#171b21] border transition-all duration-200 min-w-[220px] shadow-xl ${
-      selected ? 'border-[#c7f36b] ring-2 ring-[#c7f36b]/20' : 'border-[#2a313c] hover:border-[#3d4757]'
+      selected ? 'border-[#a855f7] ring-2 ring-[#a855f7]/20' : 'border-[#2a313c] hover:border-[#3d4757]'
     }`}>
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2.5">
-          <div className="h-8 w-8 rounded-lg bg-[#222832] border border-[#343d4b] grid place-items-center text-[#c7f36b]">
+          <div className="h-8 w-8 rounded-lg bg-[#222832] border border-[#343d4b] grid place-items-center text-[#a855f7]">
             <Zap size={16} />
           </div>
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#c7f36b]">TRIGGER</span>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#a855f7]">TRIGGER</span>
             <h4 className="text-xs font-bold text-white tracking-tight">{data.label || 'Event Ingest'}</h4>
           </div>
         </div>
@@ -48,13 +48,13 @@ export const TriggerNode = memo(({ data, selected }) => {
 
       <div className="mt-3 pt-2.5 border-t border-[#262c35] flex items-center justify-between text-[11px] font-mono text-muted">
         <span>{data.provider || 'manual'}</span>
-        <span className="h-2 w-2 rounded-full bg-[#c7f36b] shadow-[0_0_8px_#c7f36b]"></span>
+        <span className="h-2 w-2 rounded-full bg-[#a855f7] shadow-[0_0_8px_#a855f7]"></span>
       </div>
 
       <Handle
         type="source"
         position={Position.Right}
-        className="!w-3 !h-3 !bg-[#c7f36b] !border-2 !border-[#13161a] !-right-1.5"
+        className="!w-3 !h-3 !bg-[#a855f7] !border-2 !border-[#13161a] !-right-1.5"
       />
     </div>
   );

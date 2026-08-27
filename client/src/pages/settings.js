@@ -35,7 +35,7 @@ export default function SettingsPage() {
           {/* Profile Section */}
           <div className="card-panel">
             <div className="flex items-center gap-3 pb-4 border-b border-[#262c35]">
-              <div className="h-8 w-8 rounded-lg bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#c7f36b]">
+              <div className="h-8 w-8 rounded-lg bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#a855f7]">
                 <User size={16} />
               </div>
               <div>
@@ -52,7 +52,7 @@ export default function SettingsPage() {
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#c7f36b]"
+                    className="w-full bg-[#181b21] border border-[#262c35] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#a855f7]"
                   />
                 </div>
                 <div>
@@ -68,7 +68,7 @@ export default function SettingsPage() {
 
               <div className="flex items-center justify-between pt-2">
                 <span className="text-xs font-mono text-muted flex items-center gap-1.5">
-                  <Shield size={14} className="text-[#c7f36b]" /> Role:{' '}
+                  <Shield size={14} className="text-[#a855f7]" /> Role:{' '}
                   <span className="text-white font-bold uppercase">{user?.role || 'Operator'}</span>
                 </span>
 
@@ -98,7 +98,7 @@ export default function SettingsPage() {
                   <b className="text-white">CREDENTIAL_ENCRYPTION_KEY</b>
                   <p className="text-[11px] text-muted mt-0.5">AES-256-GCM symmetric encryption for OAuth tokens at rest</p>
                 </div>
-                <span className="px-2.5 py-1 rounded bg-[#17241a] text-[#c7f36b] border border-[#2e472e] text-[10px] font-bold">
+                <span className="px-2.5 py-1 rounded bg-[#17241a] text-[#a855f7] border border-[#2e472e] text-[10px] font-bold">
                   ACTIVE
                 </span>
               </div>
@@ -108,7 +108,7 @@ export default function SettingsPage() {
                   <b className="text-white">JWT_SECRET</b>
                   <p className="text-[11px] text-muted mt-0.5">HMAC-SHA256 session token signature</p>
                 </div>
-                <span className="px-2.5 py-1 rounded bg-[#17241a] text-[#c7f36b] border border-[#2e472e] text-[10px] font-bold">
+                <span className="px-2.5 py-1 rounded bg-[#17241a] text-[#a855f7] border border-[#2e472e] text-[10px] font-bold">
                   ACTIVE
                 </span>
               </div>
@@ -118,7 +118,7 @@ export default function SettingsPage() {
                   <b className="text-white">BCRYPT_PASSWORD_HASHING</b>
                   <p className="text-[11px] text-muted mt-0.5">Cost factor 12 salt rounds</p>
                 </div>
-                <span className="px-2.5 py-1 rounded bg-[#17241a] text-[#c7f36b] border border-[#2e472e] text-[10px] font-bold">
+                <span className="px-2.5 py-1 rounded bg-[#17241a] text-[#a855f7] border border-[#2e472e] text-[10px] font-bold">
                   ACTIVE
                 </span>
               </div>
@@ -141,7 +141,7 @@ export default function SettingsPage() {
               <div className="p-4 rounded-xl bg-[#171a1f] border border-[#262c35]">
                 <span className="text-[10px] text-muted uppercase">Database Substrate</span>
                 <div className="text-sm font-bold text-white mt-1">Zero-Config Memory</div>
-                <span className="text-[10px] text-[#c7f36b] mt-1 block">MongoDB URI Ready</span>
+                <span className="text-[10px] text-[#a855f7] mt-1 block">MongoDB URI Ready</span>
               </div>
 
               <div className="p-4 rounded-xl bg-[#171a1f] border border-[#262c35]">
@@ -152,7 +152,7 @@ export default function SettingsPage() {
 
               <div className="p-4 rounded-xl bg-[#171a1f] border border-[#262c35]">
                 <span className="text-[10px] text-muted uppercase">Real-Time Streaming</span>
-                <div className="text-sm font-bold text-[#c7f36b] mt-1">Socket.IO 4.7.5</div>
+                <div className="text-sm font-bold text-[#a855f7] mt-1">Socket.IO 4.7.5</div>
                 <span className="text-[10px] text-muted mt-1 block">Port 4000 Connected</span>
               </div>
             </div>

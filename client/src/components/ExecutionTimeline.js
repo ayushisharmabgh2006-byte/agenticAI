@@ -16,7 +16,7 @@ import {
 function getAgentIcon(agent) {
   switch (agent?.toLowerCase()) {
     case 'planner': return <Brain size={14} className="text-[#38bdf8]" />;
-    case 'execution': return <Layers size={14} className="text-[#c7f36b]" />;
+    case 'execution': return <Layers size={14} className="text-[#a855f7]" />;
     case 'validation': return <CheckCircle2 size={14} className="text-[#c084fc]" />;
     case 'recovery': return <ShieldAlert size={14} className="text-[#fbbf24]" />;
     case 'monitoring': return <Activity size={14} className="text-muted-light" />;
@@ -53,7 +53,7 @@ export default function ExecutionTimeline({ logs = [] }) {
               isError
                 ? 'bg-[#22171a] border-[#fb7185]/40'
                 : isSuccess
-                ? 'bg-[#141a16] border-[#c7f36b]/30'
+                ? 'bg-[#141a16] border-[#a855f7]/30'
                 : 'bg-[#15181e] border-[#262c35]'
             }`}
           >
@@ -88,7 +88,7 @@ export default function ExecutionTimeline({ logs = [] }) {
                     <div className="mt-2.5">
                       <button
                         onClick={() => setExpandedLogId(isExpanded ? null : (log.id || idx))}
-                        className="text-[11px] font-mono text-[#c7f36b] hover:underline flex items-center gap-1"
+                        className="text-[11px] font-mono text-[#a855f7] hover:underline flex items-center gap-1"
                       >
                         {isExpanded ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
                         {isExpanded ? 'Hide Payload' : 'Inspect Telemetry / Output'}

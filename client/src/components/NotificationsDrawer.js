@@ -23,7 +23,7 @@ export default function NotificationsDrawer() {
           {/* Header */}
           <div className="p-5 border-b border-[#262c35] flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#c7f36b]">
+              <div className="h-8 w-8 rounded-lg bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#a855f7]">
                 <Bell size={16} />
               </div>
               <div>
@@ -54,13 +54,13 @@ export default function NotificationsDrawer() {
           <div className="px-5 py-2.5 bg-[#171a1f] border-b border-[#262c35] flex gap-2">
             <button
               onClick={() => setFilter('all')}
-              className={`text-xs px-3 py-1 rounded-full font-mono transition-colors ${filter === 'all' ? 'bg-[#c7f36b] text-ink font-bold' : 'text-muted hover:text-white'}`}
+              className={`text-xs px-3 py-1 rounded-full font-mono transition-colors ${filter === 'all' ? 'bg-[#a855f7] text-ink font-bold' : 'text-muted hover:text-white'}`}
             >
               All ({notifications.length})
             </button>
             <button
               onClick={() => setFilter('unread')}
-              className={`text-xs px-3 py-1 rounded-full font-mono transition-colors ${filter === 'unread' ? 'bg-[#c7f36b] text-ink font-bold' : 'text-muted hover:text-white'}`}
+              className={`text-xs px-3 py-1 rounded-full font-mono transition-colors ${filter === 'unread' ? 'bg-[#a855f7] text-ink font-bold' : 'text-muted hover:text-white'}`}
             >
               Unread ({unreadCount})
             </button>
@@ -70,7 +70,7 @@ export default function NotificationsDrawer() {
           <div className="flex-1 overflow-y-auto p-4 space-y-3">
             {filteredNotifications.length === 0 ? (
               <div className="h-64 flex flex-col items-center justify-center text-center text-muted">
-                <CheckCircle size={32} className="text-[#c7f36b]/40 mb-3" />
+                <CheckCircle size={32} className="text-[#a855f7]/40 mb-3" />
                 <p className="text-sm font-medium">All caught up</p>
                 <p className="text-xs font-mono text-muted/70 mt-1">No notifications matching filter.</p>
               </div>
@@ -91,7 +91,7 @@ export default function NotificationsDrawer() {
                   >
                     <div className="flex items-start gap-3">
                       <div className={`mt-0.5 h-6 w-6 rounded-md grid place-items-center shrink-0 ${
-                        isSuccess ? 'bg-[#c7f36b]/15 text-[#c7f36b]' :
+                        isSuccess ? 'bg-[#a855f7]/15 text-[#a855f7]' :
                         isError ? 'bg-[#fb7185]/15 text-[#fb7185]' :
                         isWarning ? 'bg-[#fbbf24]/15 text-[#fbbf24]' : 'bg-[#38bdf8]/15 text-[#38bdf8]'
                       }`}>
@@ -113,7 +113,7 @@ export default function NotificationsDrawer() {
                             <Link
                               href={`/executions/${notif.executionId}`}
                               onClick={toggleNotifications}
-                              className="text-[11px] text-[#c7f36b] hover:underline flex items-center gap-1 font-medium"
+                              className="text-[11px] text-[#a855f7] hover:underline flex items-center gap-1 font-medium"
                             >
                               View run <ExternalLink size={11} />
                             </Link>

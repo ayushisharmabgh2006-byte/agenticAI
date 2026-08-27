@@ -93,7 +93,7 @@ export default function WorkflowBuilderPage() {
                   onClick={() => setActiveRunWorkflow(generatedWorkflow)}
                   className="secondary-button small"
                 >
-                  <Play size={14} className="text-[#c7f36b]" /> Test Run
+                  <Play size={14} className="text-[#a855f7]" /> Test Run
                 </button>
                 <button
                   onClick={handleSaveAndOpen}
@@ -121,7 +121,7 @@ export default function WorkflowBuilderPage() {
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
                     placeholder="e.g. When a support email arrives, summarize sentiment and notify Slack..."
-                    className="w-full bg-[#181b21] border border-[#262c35] rounded-xl p-4 text-xs text-white leading-relaxed resize-none focus:outline-none focus:border-[#c7f36b] font-mono"
+                    className="w-full bg-[#181b21] border border-[#262c35] rounded-xl p-4 text-xs text-white leading-relaxed resize-none focus:outline-none focus:border-[#a855f7] font-mono"
                   />
                 </div>
 
@@ -151,7 +151,7 @@ export default function WorkflowBuilderPage() {
                       className="w-full p-3 rounded-xl bg-[#171a1f] hover:bg-[#1f242c] border border-[#262c35] text-left text-xs text-muted-light hover:text-white transition-all flex items-center justify-between group leading-relaxed"
                     >
                       <span className="line-clamp-2">{s}</span>
-                      <ArrowRight size={13} className="text-muted group-hover:text-[#c7f36b] shrink-0 ml-2 transition-transform group-hover:translate-x-1" />
+                      <ArrowRight size={13} className="text-muted group-hover:text-[#a855f7] shrink-0 ml-2 transition-transform group-hover:translate-x-1" />
                     </button>
                   ))}
                 </div>
@@ -171,7 +171,7 @@ export default function WorkflowBuilderPage() {
 
                   {generatedWorkflow && (
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono px-2.5 py-1 rounded bg-[#181c22] border border-[#262c35] text-[#c7f36b]">
+                      <span className="text-[10px] font-mono px-2.5 py-1 rounded bg-[#181c22] border border-[#262c35] text-[#a855f7]">
                         Mode: {generatedWorkflow.generationMode || 'deterministic'}
                       </span>
                       <span className="text-[10px] font-mono px-2.5 py-1 rounded bg-[#181c22] border border-[#262c35] text-muted">
@@ -189,7 +189,7 @@ export default function WorkflowBuilderPage() {
                     />
                   ) : (
                     <div className="h-full flex flex-col items-center justify-center text-center p-8 text-muted bg-[#0c0e12]">
-                      <div className="h-12 w-12 rounded-2xl bg-[#171a1f] border border-[#262c35] grid place-items-center text-[#c7f36b] mb-3">
+                      <div className="h-12 w-12 rounded-2xl bg-[#171a1f] border border-[#262c35] grid place-items-center text-[#a855f7] mb-3">
                         <Sparkles size={24} />
                       </div>
                       <h4 className="font-grotesk font-bold text-base text-white">Graph Not Yet Generated</h4>

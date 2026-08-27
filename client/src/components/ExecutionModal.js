@@ -73,7 +73,7 @@ export default function ExecutionModal({ workflow, isOpen, onClose }) {
         {/* Modal Header */}
         <div className="p-5 border-b border-[#262c35] flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#c7f36b]">
+            <div className="h-9 w-9 rounded-xl bg-[#1b1f26] border border-[#262c35] grid place-items-center text-[#a855f7]">
               <Activity size={18} />
             </div>
             <div>
@@ -102,7 +102,7 @@ export default function ExecutionModal({ workflow, isOpen, onClose }) {
                 rows={5}
                 value={inputJson}
                 onChange={(e) => setInputJson(e.target.value)}
-                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl p-3.5 text-xs text-white font-mono leading-relaxed focus:outline-none focus:border-[#c7f36b] resize-none"
+                className="w-full bg-[#181b21] border border-[#262c35] rounded-xl p-3.5 text-xs text-white font-mono leading-relaxed focus:outline-none focus:border-[#a855f7] resize-none"
               />
             </div>
           )}
@@ -161,7 +161,7 @@ export default function ExecutionModal({ workflow, isOpen, onClose }) {
           {currentExecution?.id ? (
             <Link
               href={`/executions/${currentExecution.id}`}
-              className="text-xs text-[#c7f36b] hover:underline flex items-center gap-1.5 font-medium"
+              className="text-xs text-[#a855f7] hover:underline flex items-center gap-1.5 font-medium"
             >
               Open Full Audit Log <ExternalLink size={13} />
             </Link>

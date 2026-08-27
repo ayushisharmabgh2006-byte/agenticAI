@@ -161,7 +161,7 @@ export default function IntegrationsPage() {
 
             <div className="flex items-center gap-2">
               <span className="text-xs font-mono text-muted bg-[#181b21] px-3 py-1.5 rounded-lg border border-[#262c35] flex items-center gap-2">
-                <ShieldCheck size={14} className="text-[#c7f36b]" /> Encryption Key Active
+                <ShieldCheck size={14} className="text-[#a855f7]" /> Encryption Key Active
               </span>
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function IntegrationsPage() {
           {testResult && (
             <div className={`p-4 rounded-xl border flex items-center justify-between font-mono text-xs ${
               testResult.ok
-                ? 'bg-[#152419] border-[#c7f36b]/40 text-[#c7f36b]'
+                ? 'bg-[#152419] border-[#a855f7]/40 text-[#a855f7]'
                 : 'bg-[#2b181b] border-[#fb7185]/40 text-[#fb7185]'
             }`}>
               <div className="flex items-center gap-2">
@@ -210,8 +210,8 @@ export default function IntegrationsPage() {
                       </div>
 
                       <div className="flex items-center gap-1.5 font-mono text-xs">
-                        <span className={`h-2 w-2 rounded-full ${isConnected ? 'bg-[#c7f36b] shadow-[0_0_8px_#c7f36b]' : 'bg-[#6b7280]'}`} />
-                        <span className={isConnected ? 'text-[#c7f36b] font-bold' : 'text-muted'}>
+                        <span className={`h-2 w-2 rounded-full ${isConnected ? 'bg-[#a855f7] shadow-[0_0_8px_#a855f7]' : 'bg-[#6b7280]'}`} />
+                        <span className={isConnected ? 'text-[#a855f7] font-bold' : 'text-muted'}>
                           {isConnected ? 'CONNECTED' : 'DISCONNECTED'}
                         </span>
                       </div>

@@ -10,11 +10,12 @@ export default function CollegeChat() {
   const [messages, setMessages] = useState([{ role: 'assistant', content: 'Welcome to Campus Answers. Ask me about admissions, courses, fees, exams, hostel, library, placements, or scholarships. I will cite the college documents behind every answer.' }]);
   const [loading, setLoading] = useState(false);
   const [sources, setSources] = useState([]);
+  const [conversationId, setConversationId] = useState(null);
   const inputRef = useRef(null);
   async function ask(value = question) {
     const clean = value.trim(); if (!clean || loading) return;
     setQuestion(''); setMessages(current => [...current, { role: 'user', content: clean }]); setLoading(true);
-    try { const { data } = await api.post('/rag/chat', { question: clean }); setMessages(current => [...current, { role: 'assistant', content: data.answer, grounded: data.grounded }]); setSources(data.sources || []); }
+    try { const { data } = await api.post('/rag/chat', { question: clean, conversationId }); setConversationId(data.conversationId); setMessages(current => [...current, { role: 'assistant', content: data.answer, grounded: data.grounded, model: data.model }]); setSources(data.sources || []); }
     catch (error) { setMessages(current => [...current, { role: 'assistant', content: error.response?.data?.message || 'The knowledge service is unavailable right now. Please try again.' }]); }
     finally { setLoading(false); }
   }

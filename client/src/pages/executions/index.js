@@ -75,7 +75,7 @@ export default function ExecutionsListPage() {
                 placeholder="Search by workflow name or execution ID..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-[#13161a] border border-[#262c35] rounded-xl px-4 py-2.5 text-xs text-white pl-10 focus:outline-none focus:border-[#c7f36b]"
+                className="w-full bg-[#13161a] border border-[#262c35] rounded-xl px-4 py-2.5 text-xs text-white pl-10 focus:outline-none focus:border-[#a855f7]"
               />
               <Search size={15} className="absolute left-3.5 top-3 text-muted" />
             </div>
@@ -89,7 +89,7 @@ export default function ExecutionsListPage() {
                     onClick={() => setStatusFilter(s === 'ALL' ? '' : s)}
                     className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all ${
                       isSelected
-                        ? 'bg-[#c7f36b] text-ink font-bold'
+                        ? 'bg-[#a855f7] text-ink font-bold'
                         : 'bg-[#13161a] border border-[#262c35] text-muted hover:text-white'
                     }`}
                   >
@@ -104,7 +104,7 @@ export default function ExecutionsListPage() {
           <div className="card-panel p-0 overflow-hidden">
             {loading ? (
               <div className="py-20 text-center">
-                <Loader2 className="animate-spin text-[#c7f36b] mx-auto" size={32} />
+                <Loader2 className="animate-spin text-[#a855f7] mx-auto" size={32} />
                 <p className="text-xs font-mono text-muted mt-3">Loading telemetry audit logs...</p>
               </div>
             ) : filtered.length === 0 ? (
@@ -150,7 +150,7 @@ export default function ExecutionsListPage() {
                         <td className="py-4 px-5 text-right">
                           <Link
                             href={`/executions/${e.id}`}
-                            className="inline-flex items-center gap-1 text-xs text-[#c7f36b] hover:underline font-semibold"
+                            className="inline-flex items-center gap-1 text-xs text-[#a855f7] hover:underline font-semibold"
                           >
                             Inspect Run <ChevronRight size={13} />
                           </Link>
